@@ -62,3 +62,21 @@
 	transition: all 0.4s ease-in-out;
 	box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
 }
+.all-containers{
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+
+}
+form{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  
+}
+.container1{
+  margin-left:50px;
+}
+.container2{
+  margin-right: 50px;
+}

@@ -36,12 +36,12 @@ function Navbar({ signOut }) {
 							className={location === "/earnings" ? 'active' : null}
 							>Earnings</Link>
 					</li>
-					{/* <li>
+					<li>
 						<Link
-							to="/bank"
-							className={location === "/bank" ? 'active' : null}
-							>Bank</Link>
-					</li> */}
+							to="/tax"
+							className={location === "/tax" ? 'active' : null}
+							>Tax</Link>
+					</li>
 					<li>
 						<Link
 							to="/mutual"

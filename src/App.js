@@ -7,6 +7,7 @@ import Mutual from './components/mutual.js';
 import Details from './components/details.js';
 import { useState } from "react";
 import "./index.css";
+import TaxCalcSection from './components/TaxCalcSection'
 
 function App() {
 	const user = useUser();
@@ -20,7 +21,7 @@ function App() {
 			<Header />
 
 			{user === null ?
-				<div className="txt-center">
+				<div className="taxt-center">
 				
 					<h1>Finance Management</h1>
 					
@@ -46,6 +47,7 @@ function App() {
 						<Route path='/earnings' element={<SectionType type='earnings' />} />
 						{/* <Route path='/bank' element={<SectionType type='bank' />} /> */}
 						<Route path='/mutual' element={<Mutual/>}/>
+						<Route path='/tax' element={<TaxCalcSection/>}/>
 					</Routes>
 				</>
 			}
