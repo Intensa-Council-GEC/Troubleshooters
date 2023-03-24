@@ -1,0 +1,98 @@
+[
+    {  
+    "category":"Mutual Funds",
+    "profile":[
+        {
+            "image":"https://www.shutterstock.com/image-vector/money-bag-flat-illustration-dollars-260nw-1927192892.jpg",
+            "name":"Shield Portfolio",
+            "risk":"Very Low Risk",
+            "Cagr":9.2,
+            "description":"Safegaurd your savings for emergencies with returns that beat FDs and keep inflation at bay."
+        },
+        {
+            "image":"https://w10.naukri.com/mailers/2022/naukri-learning/what-is/What-is-Finance.jpg",
+            "name":"Stable Portfolio",
+            "risk":"Low Risk",
+            "Cagr":10.2,
+            "description":"Safegaurd your savings for emergencies with returns that beat FDs and keep inflation at bay."
+        },
+        {
+            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO3pGJLjqzpWTQkW8_a5Q2uzsT9JcJghMBpA&usqp=CAU",
+            "name":"Balanced Portfolio",
+            "risk":"Moderate Risk",
+            "Cagr":13.3,
+            "description":"Safegaurd your savings for emergencies with returns that beat FDs and keep inflation at bay."
+        },
+        {
+            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiNHgZuE_afKCavCcc5twZeaL9PrXr5GGvkQ&usqp=CAU",
+            "name":"Balanced + Portfolio",
+            "risk":"Moderately High Risk",
+            "Cagr":15.5,
+            "description":"Safegaurd your savings for emergencies with returns that beat FDs and keep inflation at bay."
+        },
+        {
+            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw_OsWGya-VuusC0SxbPjUpY86xUjufkgrBQ&usqp=CAU",
+            "name":"Growth Portfolio",
+            "risk":"High Risk",
+            "Cagr":17.5,
+            "description":"Safegaurd your savings for emergencies with returns that beat FDs and keep inflation at bay."
+        },
+        {
+            "image":"https://cdn.xxl.thumbs.canstockphoto.com/headline-finance-and-magnifier-concept-of-financial-decision-stock-photo_csp1142074.jpg",
+            "name":"High Growth Portfolio",
+            "risk":"VeryHigh Risk",
+            "Cagr":20.1,
+            "description":"Safegaurd your savings for emergencies with returns that beat FDs and keep inflation at bay."
+        }
+    ]
+    
+},
+{  
+    "category":"Stocks",
+    "profile":[
+       
+        {
+            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO3pGJLjqzpWTQkW8_a5Q2uzsT9JcJghMBpA&usqp=CAU",
+            "name":"Balanced Portfolio Stocks",
+            "risk":"Moderate Risk",
+            "Cagr":13.3,
+            "description":"Safegaurd your savings for emergencies with returns that beat FDs and keep inflation at bay."
+        },
+        {
+            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiNHgZuE_afKCavCcc5twZeaL9PrXr5GGvkQ&usqp=CAU",
+            "name":"Balanced + Portfolio Stocks",
+            "risk":"Moderately High Risk",
+            "Cagr":15.5,
+            "description":"Safegaurd your savings for emergencies with returns that beat FDs and keep inflation at bay."
+        },
+        {
+            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw_OsWGya-VuusC0SxbPjUpY86xUjufkgrBQ&usqp=CAU",
+            "name":"Growth Portfolio Stocks",
+            "risk":"High Risk",
+            "Cagr":17.5,
+            "description":"Safegaurd your savings for emergencies with returns that beat FDs and keep inflation at bay."
+        },
+        {
+            "image":"https://cdn.xxl.thumbs.canstockphoto.com/headline-finance-and-magnifier-concept-of-financial-decision-stock-photo_csp1142074.jpg",
+            "name":"High Growth Portfolio Stocks",
+            "risk":"VeryHigh Risk",
+            "Cagr":20.1,
+            "description":"Safegaurd your savings for emergencies with returns that beat FDs and keep inflation at bay."
+        }, {
+            "image":"https://www.shutterstock.com/image-vector/money-bag-flat-illustration-dollars-260nw-1927192892.jpg",
+            "name":"Shield Portfolio Stocks",
+            "risk":"Very Low Risk",
+            "Cagr":9.2,
+            "description":"Safegaurd your savings for emergencies with returns that beat FDs and keep inflation at bay."
+        },
+        {
+            "image":"https://w10.naukri.com/mailers/2022/naukri-learning/what-is/What-is-Finance.jpg",
+            "name":"Stable Portfolio Stocks",
+            "risk":"Low Risk",
+            "Cagr":10.2,
+            "description":"Safegaurd your savings for emergencies with returns that beat FDs and keep inflation at bay."
+        }
+    ]
+    
+}
+]

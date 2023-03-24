@@ -128,7 +128,7 @@ export function findBetterTaxRegime(income_tax_old, income_tax_new) {
       );
     } else {
       const difference = income_tax_new - income_tax_old;
-      //difference=difference.toFixed(0)
+      difference=difference.toFixed(0)
       return (
         `Please opt for Old Tax Regime as you will have to pay Rs. ${difference} lesser`
       );

@@ -1,17 +1,20 @@
+import React from "react";
+// import Card from './Card';
+// import pic from '../imgs/mon.jpg'
+// import Funds from './Funds.json'
 import { useState, useEffect } from 'react';
 import { ref, onValue, remove, update } from 'firebase/database';
 import { db, auth } from '../firebase';
-import SectionType from './SectionType';
+// import SectionType from './SectionType';  
 
-function ExpenseList({ type, yearActive, monthActive }) {
-	const [data, setData] = useState([]),
-			[  totExpense, setTotExpense] = useState(null);
-
+function CurrentInvestment(type="investment",yearActive=2023, monthActive=3){
+    const [data, setData] = useState([]),
+			[totExpense, setTotExpense] = useState(null);
+     var totalAmount=0;
 	useEffect(() => {
-		const query = monthActive === 'all' ?
-			`/users/${auth.currentUser.uid}/${type}/${yearActive}` :
-			`/users/${auth.currentUser.uid}/${type}/${yearActive}/${monthActive}`;
-
+		// const 
+		const query =`/users/${auth.currentUser.uid}/investment/2023/${monthActive}/`;
+		// console.log(query)
 		onValue(
 			ref(db, query),
 			snapshot => {
@@ -20,16 +23,18 @@ function ExpenseList({ type, yearActive, monthActive }) {
 				if(snapval !== null) {
 					let dbData = [];
 
-					monthActive === 'all' ?
-						Object.values(snapval).map(dbMonth => Object.values(dbMonth).map(dbVal => dbData = [ ...dbData, dbVal ])):
+					// monthActive === 'all' ?
+						// Object.values(snapval).map(dbMonth => Object.values(dbMonth).map(dbVal => dbData = [ ...dbData, dbVal ])):
 						Object.values(snapval).map(dbVal => dbData = [ ...dbData, dbVal ]);
-
-					setData(dbData);
+						setData(dbData);
+						console.log(dbData);
 					
-					let total = dbData.reduce((tot, current) => tot + parseInt(current.price), 0);
+					let total = dbData.reduce((tot, current) => tot + parseInt(current.Amount), 0);
 					setTotExpense(total.toLocaleString());
-					let grandTotal=dbData.reduce((tot,current)=>tot+ 2000(current.price),0)
+					//let grandTotal=dbData.reduce((tot,current)=>tot+ 2000(current.price),0)
 					setTotExpense(total.toLocaleString());
+
+
 				}
 			}
 		);
@@ -65,8 +70,12 @@ function ExpenseList({ type, yearActive, monthActive }) {
 					{data.map(expense => 
 						<li key={expense.id}>
 							<span>{expense.name}</span>
-							<strong>Rs {parseInt(expense.price).toLocaleString()}</strong>
-							<time>{expense.date}</time>
+							<strong>Rs {parseInt(expense.Amount).toLocaleString()}</strong>
+							<time>{expense.intrest}%
+                            <br />
+                            {expense.year} Years
+                            </time>
+                            {/* <time>{expense.year} Years</time> */}
 							<button
 								className="delete"
 								id={expense.id}
@@ -84,7 +93,7 @@ function ExpenseList({ type, yearActive, monthActive }) {
 					)}
 
 					<li className={type !== 'earnings' ? 'tot-expense' : 'tot-earn'}>
-						<span>TOTAL:</span>
+						<span>TOTAL INVESTMENT AMOUNT:</span>
 						<strong>Rs {totExpense}</strong>
 					</li>
 					
@@ -97,7 +106,6 @@ function ExpenseList({ type, yearActive, monthActive }) {
 				</li>
 			}
 		</ul>
-	);
+    );
 }
-
-export default ExpenseList;
+export default CurrentInvestment;

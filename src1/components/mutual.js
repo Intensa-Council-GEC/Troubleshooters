@@ -71,47 +71,47 @@ const LumphandleCalculate = (event) => {
     <><div className='all-containers'>
     <div className='container1'>
       <h1>SIP Calculator</h1>
-      <form className='one' onSubmit={handleCalculate}>
-        <label class = 'forMutual'>
+      <form onSubmit={handleCalculate}>
+        <label>
           Principal Amount:
           <input type="number" value={principalAmount} onChange={handlePrincipalAmountChange} />
         </label>
         <br />
-        <label class = 'forMutual'>
+        <label>
           Interest Rate (%):
           <input type="number" step="0.01" value={interestRate} onChange={handleInterestRateChange} />
         </label>
         <br />
-        <label class = 'forMutual'>
+        <label>
           Tenure (years):
           <input type="number" value={tenure} onChange={handleTenureChange} />
         </label>
-      <h2>Result: {result}</h2>
         <br />
-        <button className='btn' type="submit">Calculate</button>
+        <button type="submit">Calculate</button>
       </form>
+      <h2>Result: {result}</h2>
     </div>
     <div className='container2'>
       <h1>Lumpsum Calculator</h1>
-      <form className='one' onSubmit={LumphandleCalculate}>
-        <label class = 'forMutual'>
+      <form onSubmit={LumphandleCalculate}>
+        <label>
           Principal Amount:
           <input type="number" value={LprincipalAmount} onChange={LumphandlePrincipalAmountChange} />
         </label>
         <br />
-        <label class = 'forMutual'>
+        <label>
           Interest Rate (%):
           <input type="number" step="0.01" value={LinterestRate} onChange={LumphandleInterestRateChange} />
         </label>
         <br />
-        <label class = 'forMutual'>
+        <label>
           Tenure (years):
           <input type="number" value={Ltenure} onChange={LumphandleTenureChange} />
         </label>
-      <h2>Result: {Lresult}</h2>
         <br />
-        <button className='btn' type="submit">Calculate</button>
+        <button type="submit">Calculate</button>
       </form>
+      <h2>Result: {Lresult}</h2>
     </div>
 	</div>
     </>

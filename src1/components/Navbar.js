@@ -20,34 +20,33 @@ function Navbar({ signOut }) {
 				<ul>
 					<li>
 						<Link
+							to="/"
+							className={location === "/" ? 'active' : null}
+							>Expense</Link>
+					</li>
+					<li>
+						<Link
 							to="/investments"
 							className={location === "/investments" ? 'active' : null}
 							>Investments</Link>
 					</li>
-				
 					<li>
 						<Link
-							to="/bills"
-							className={location === "/bills" ? 'active' : null}
-							>Bills</Link>
-					</li>
-					<li>
-						<Link
-							to="/notifications"
-							className={location === "/notifications" ? 'active' : null}
-							>Notifications</Link>
+							to="/earnings"
+							className={location === "/earnings" ? 'active' : null}
+							>Earnings</Link>
 					</li>
 					<li>
 						<Link
 							to="/tax"
 							className={location === "/tax" ? 'active' : null}
-							>tax</Link>
+							>Tax</Link>
 					</li>
 					<li>
 						<Link
 							to="/mutual"
 							className={location === "/mutual" ? 'active' : null}
-							>Investor</Link>
+							>Mutual</Link>
 					</li>
 					<li>
 						<button onClick={signOut}>Sign Out</button>

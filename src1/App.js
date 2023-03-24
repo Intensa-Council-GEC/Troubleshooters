@@ -8,11 +8,6 @@ import Details from './components/details.js';
 import { useState } from "react";
 import "./index.css";
 import TaxCalcSection from './components/TaxCalcSection'
-import CardPage from './components/CardPage.js';
-import pic from './imgs/mon.jpg'
-import Portfolio from './components/portfolio.js';
-import Bills from './components/Bills'
-import Notification from './components/Notifications'
 
 function App() {
 	const user = useUser();
@@ -20,7 +15,7 @@ function App() {
 		// const [totalIncome, setTotalIncome] = useState(0);
 		// const [totalExpense, setTotalExpense] = useState(0);
 		// const total = totalIncome - totalExpense; // Calculate total by subtracting expense from income
-	   
+	  
 	return (
 		<BrowserRouter>
 			<Header />
@@ -48,25 +43,20 @@ function App() {
       <SectionType type='Expense' setTotal={setTotalExpense} />
       <div>Total: {total}</div> */}
 						</>} />
-						<Route path='/investments' element={<CardPage />} />
+						<Route path='/investments' element={<SectionType type='investments' />} />
 						<Route path='/earnings' element={<SectionType type='earnings' />} />
 						{/* <Route path='/bank' element={<SectionType type='bank' />} /> */}
 						<Route path='/mutual' element={<Mutual/>}/>
-						<Route path='/tax' element={< TaxCalcSection/>}/>
-						<Route path='/notifications' element={<Notification/>}/>
-						<Route path='/bills' element={<Bills/>}/>
-	
-						<Route path='/portfolio' element={< Portfolio/>}/>
+						<Route path='/tax' element={<TaxCalcSection/>}/>
 					</Routes>
 				</>
 			}
 
 			<div className="copyright">
-				<small>&copy; developed by @Troubleshooters</small>
-
-				{/* <a href="https://travolgi.com" target="_blank" rel="noopener noreferrer">
+				<small>&copy; developed by</small>
+				<a href="https://travolgi.com" target="_blank" rel="noopener noreferrer">
 					<img src="https://sled.travolgi.com/assets/travolgi-logo.png" alt="Travolgi logo" />
-				</a> */}
+				</a>
 			</div>
 		</BrowserRouter>
 	);

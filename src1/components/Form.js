@@ -4,7 +4,7 @@ import { db, auth } from '../firebase';
 import { uid } from 'uid';
 
 function Form({ type }) {
-	const initVals = { name: '', price: '', reminder: 2, date: new Date().toLocaleDateString() }
+	const initVals = { name: '', price: '', date: new Date().toLocaleDateString() }
 	const [newExpense, setNewExpense] = useState(initVals);
 
 	const handleChange = e => {

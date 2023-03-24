@@ -5,7 +5,7 @@ import SectionType from './SectionType';
 
 function ExpenseList({ type, yearActive, monthActive }) {
 	const [data, setData] = useState([]),
-			[  totExpense, setTotExpense] = useState(null);
+			[totExpense, setTotExpense] = useState(null);
 
 	useEffect(() => {
 		const query = monthActive === 'all' ?

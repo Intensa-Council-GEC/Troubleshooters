@@ -3,28 +3,39 @@ import { ref, onValue, remove, update } from 'firebase/database';
 import { db, auth } from '../firebase';
 import SectionType from './SectionType';
 
-function ExpenseList({ type, yearActive, monthActive }) {
+function Notis({ type='bill', yearActive= 2023, monthActive=3 }) {
 	const [data, setData] = useState([]),
-			[  totExpense, setTotExpense] = useState(null);
+			[totExpense, setTotExpense] = useState(null);
 
 	useEffect(() => {
-		const query = monthActive === 'all' ?
-			`/users/${auth.currentUser.uid}/${type}/${yearActive}` :
-			`/users/${auth.currentUser.uid}/${type}/${yearActive}/${monthActive}`;
-
+		// const 
+		const query = 
+			`/users/${auth.currentUser.uid}/${type}/${yearActive}/${monthActive}/`;
+		// console.log(query)
 		onValue(
 			ref(db, query),
 			snapshot => {
 				setData([]);
 				const snapval = snapshot.val();
+
 				if(snapval !== null) {
 					let dbData = [];
 
-					monthActive === 'all' ?
-						Object.values(snapval).map(dbMonth => Object.values(dbMonth).map(dbVal => dbData = [ ...dbData, dbVal ])):
-						Object.values(snapval).map(dbVal => dbData = [ ...dbData, dbVal ]);
-
-					setData(dbData);
+					// monthActive === 'all' ?
+						// Object.values(snapval).map(dbMonth => Object.values(dbMonth).map(dbVal => dbData = [ ...dbData, dbVal ])):
+						
+						
+						// Object.values(snapval).map(dbVal => dbData = [ ...dbData, dbVal ]);
+						Object.values(snapval).map(dbVal => {
+							if (Math.floor((new Date(dbVal.date) - new Date()) / (1000 * 60 * 60 * 24)) <= dbVal.reminder
+							? true
+							: false){
+							  dbData = [ ...dbData, dbVal ];
+							}
+						  });
+						setData(dbData);
+						console.log(Math.floor((new Date(dbData.date) - new Date()) / (1000 * 60 * 60 * 24)) - dbData.reminder)
+						console.log(dbData);
 					
 					let total = dbData.reduce((tot, current) => tot + parseInt(current.price), 0);
 					setTotExpense(total.toLocaleString());
@@ -66,6 +77,8 @@ function ExpenseList({ type, yearActive, monthActive }) {
 						<li key={expense.id}>
 							<span>{expense.name}</span>
 							<strong>Rs {parseInt(expense.price).toLocaleString()}</strong>
+							{/* <strong>{parseInt(expense.reminder).toLocaleString()}</strong> */}
+
 							<time>{expense.date}</time>
 							<button
 								className="delete"
@@ -100,4 +113,4 @@ function ExpenseList({ type, yearActive, monthActive }) {
 	);
 }
 
-export default ExpenseList;
+export default Notis;
