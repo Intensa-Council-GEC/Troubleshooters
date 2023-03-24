@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-
-import Card from './Card';
-import pic from '../imgs/mon.jpg'
-import Funds from './Funds.json'
+import './card.css'
+// import Card from './Card';
+// import pic from '../imgs/mon.jpg'
+// import Funds from './Funds.json'
 import CurrentInvestment from './CurrentInvestment';
 import MutualFunds from './MutualFunds';
 import Stocks from './Stocks';
@@ -41,7 +41,7 @@ const [activeButton, setActiveButton] = useState('button1');
    
     
 
-   <section>
+   <section >
             <nav>
                 <h2>Investment Details</h2>
             </nav>

@@ -211,6 +211,10 @@ section {
 	position: relative;
 	top:-90px;
 	padding-block: 1rem 4rem;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	width: 75%;
 }
 
 form, ul.expense-list li {

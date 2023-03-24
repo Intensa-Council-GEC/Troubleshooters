@@ -47,6 +47,19 @@ body {
   
  
 }
+.LOL{
+  padding: 30px;
+  display: flex;
+/*  
+  background-color: rgba(0, 211, 226, 0.811); */
+  
+
+ 
+  border-radius: 5px;
+  
+
+box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+}
 .card0{
   padding: 30px;
   display: flex;
